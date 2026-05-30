@@ -93,3 +93,11 @@ To disable auto-start, disable the `systemd` service:
 ```sh
 systemd --user disable flashguard.service
 ```
+
+### logs
+
+Like any `systemd` service, you can view the logs via `journalctl`:
+
+```sh
+journalctl --user -fu flashguard.service
+```
