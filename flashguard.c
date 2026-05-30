@@ -24,7 +24,7 @@
 #endif
 
 #define APP_NAME "FlashGuard"
-#define CONFIG_SUBPATH "flashguard/config"
+#define CONFIG_SUBPATH "flashguard/flashguard.config"
 #define MAX_OUTPUT_NAME 128
 
 typedef struct {
@@ -151,6 +151,16 @@ static int parse_int_value(const char *text, int *value) {
     return 1;
 }
 
+static char *strip_inline_comment(char *text) {
+    char *comment = strchr(text, '#');
+
+    if (comment != NULL) {
+        *comment = '\0';
+    }
+
+    return trim_whitespace(text);
+}
+
 static int parse_double_value(const char *text, double *value) {
     char *end = NULL;
     double parsed;
@@ -274,7 +284,7 @@ static int load_config_file(const char *path, Config *cfg_out, bool *file_found,
 
         *equals = '\0';
         key = trim_whitespace(trimmed);
-        value = trim_whitespace(equals + 1);
+        value = strip_inline_comment(equals + 1);
 
         if (strcmp(key, "fps") == 0) {
             if (!parse_int_value(value, &cfg.fps)) {
