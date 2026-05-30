@@ -3,12 +3,12 @@
 _Flash guard is an adaptive dimming utility to dynamically darken bright screen contents_
 
 
-## why?
+### why?
 
 As a chronic migraine sufferer, the sudden contrast difference from dark
 applications to bright white pages is a big trigger.
 
-## jUsT uSe DaRk ReAdEr
+### jUsT uSe DaRk ReAdEr
 
 Sure, I used to use Dark Reader, but there are some issues with it:
 1. It doesn't always render images, diagrams, etc. properly
@@ -16,7 +16,10 @@ Sure, I used to use Dark Reader, but there are some issues with it:
 3. Only works in your browser. What about applications that don't support dark
    mode?
 
-## installation
+### installation
+
+>[!NOTE]
+> Only X11 is supported
 
 Clone the repo and build the project:
 ```
@@ -27,7 +30,7 @@ make install
 This builds the binary, installs a systemd service to handle starting the
 program, and creates a basic config file at `~/.config/flashguard/flashguard.config`.
 
-## customisation
+### customisation
 
 There are a few knobs you can turn to adjust the dimming speed and amount. The
 config file lives in `~/.config/flashguard/flashguard.config`.
