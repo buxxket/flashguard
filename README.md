@@ -1,6 +1,6 @@
-# Flash guard
+# Flash Guard
 
-_Flash guard is an adaptive dimming utility to dynamically darken bright screen contents_
+_Flash Guard is an adaptive dimming utility to dynamically darken bright screen contents_
 
 
 ### why?
@@ -40,7 +40,7 @@ root or let `make install` create one for you. A complete example config is
 shown below:
 
 ```ini
-# Flash guard
+# Flash Guard
 #
 # All values are optional. Remove a line to fall back to the built-in default.
 
@@ -64,3 +64,32 @@ The most useful settings are:
 * `min_brightness` and `max_brightness` for the allowed brightness range.
 * `curve_start_avg` and `curve_end_avg` for where dimming starts and ends.
 * `grid_x` and `grid_y` for the sampling grid size.
+
+### starting
+
+You can start the Flash Guard with `systemd`:
+
+```sh
+systemd --user start flashguard.service
+```
+
+To enable Flash Guard to start automatically when you login to your system, you
+can enable the `systemd` service:
+
+```sh
+systemd --user enable --now flashguard.service
+```
+
+### stopping
+
+You can stop Flash Guard with:
+
+```sh
+systemd --user stop flashguard.service
+```
+
+To disable auto-start, disable the `systemd` service:
+
+```sh
+systemd --user disable flashguard.service
+```
