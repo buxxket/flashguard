@@ -1,31 +1,7 @@
 # Flash guard
 
-**Flash guard is an adaptive dimming utility to dynamically darken bright screen contents **
+_Flash guard is an adaptive dimming utility to dynamically darken bright screen contents_
 
-```
-                   .;lodddoc:,.
-                 'OMWodxOKXNMMMW0o'
-               .xXWW0KKMMMMMMMNNWNMK'
-              :OOWMMMMMMMMMMNkKxlXMMMc
-            .k0XMMMMMMMMMMWdx0o0MMMMMMo
-           cWNMMMMMMMMMMMKlKkOMMMMMMMMM,
-          lNkXWMMMMMMMMM0kNoXMMMMMMMMMMk
-          KWN0O00KXNWMMXN0xWMMMMMMMMMMMN;
-          K0k.,;cdkKWMMMKoMMMMMMMMXkNMMMx'
-          00d ,:;,....lMMxOMMMMMMN:OcMMX.
-          xKo         'MMM:WMMMMMN;xdMMc
-          oNd         'MMMkdMMMMX0NXMMK
-          xNXkc'.     'MMMWoMMMMMMMMMW.
-          KXO0000OOdl;oMMWkKMMMMMMMMMk
-          'WMMMMMWXNMMMOdkWMMMMMMMMMW,
-           lMMMMMMMMMMx:MMMMMMMMMMMK.
-            kMMMMMMMMMxlMMMMMMMXXNl
-             NMMMMMMMMX,MMMMNxkKo.
-            xMMMMMMMMMMcXMKxk0c
-           'MXONMMMMMMMX0K0k'
-            .lOOO0KNMMMWO:
-                ':oxxo;
-```
 
 ## why?
 
@@ -61,10 +37,9 @@ root or let `make install` create one for you. A complete example config is
 shown below:
 
 ```ini
-# FlashGuard default config
+# Flash guard
 #
 # All values are optional. Remove a line to fall back to the built-in default.
-# Inline comments are supported after a value.
 
 fps=144 # update frequency in frames per second
 min_brightness=0.6 # minimum screen brightness
